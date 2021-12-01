@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+* ::selection{
+    background: rgba(255, 0, 0, 0.507);
+}
+
+body{
+    background-image: url(meta/bg.png);
+}
+
+
+.cabeca{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px red solid;
+    box-shadow: 1px 1px 10px black;
+}
+.cabeca ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.cabeca ul li{
+    transition: .3s;
+    padding: 20px;
+}
+.cabeca ul li:hover{
+    transition: .3s;
+    background-color: red;
+}
+.cabeca ul a{
+    color: white;
+    text-decoration: none;
+}
+
+.cabeca img{
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: -100px;
+}
+
+
+
+.show{
+    display: block!important;
+}
+
+.burguer {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 101;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(255, 0, 0);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+
+.navegar{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px red solid;
+    border-left: 1px red solid;
+    border-right: 1px red solid;
+    z-index: 2;
+    margin-top: -2px;
+}
+
+#btn-consult{
+    background: none;
+    border: none;
+}
+
+#btn-consult img{
+    width: 50px;
+    height: 50px;
+}
+
+.navegar input{
+    width: 25%;
+}
+
+.navegar button{
+    border: none;
+    padding: 10px;
+    background: red;
+    color: white;
+    transition: .3s;
+}
+
+.navegar button:hover{
+    transform: scale(1.1);
+    transition: .3s;
+}
+
+table{
+    font-size: 25px;
+}
+
+td img{
+    max-width: 100px;
+
+}
+
+footer{
+    width: 50%;
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: 1px rgb(27, 0, 0) solid;
+    border-radius: 5px 5px 0px 0px;
+    border-bottom: none;
+}
+
+footer a{
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 3px;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-weight: bol7d;
+    transition: .3s;
+}
+
+footer a:hover{
+    color: rgb(255, 255, 255);
+    background-color: red;
+    transition: .3s;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .cabeca{
+        display: none;
+        
+    }
+    
+    .cabeca ul{
+        display: block;
+    }
+
+    
+    .navegar{
+        position: relative;
+        border-right: none;
+        width: 100%;
+        border-left: none;
+    }
+
+    .navegar input{
+        width: 60%;
+    }
+    
+    table{
+        font-size: 10px;
+        height: 100%;
+        
+    }
+
+    td img{
+        max-width: 50px;
+    }
+  }
+
+@media only screen and (min-width: 768px) {
+    .burguer{
+    display: none;
+    }
+}

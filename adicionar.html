@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrackWatch 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adicionar.css">
+    <link rel="stylesheet" href="toastr/toastr.min.css">
+    <link rel="shortcut icon" href="meta/crackwatch.png">
+</head>
+<body>
+    <header class="cabeca" id="cabeca"><!-- Parte de cima do Site -->
+        <img src="meta/crackwatch.png" id="crck">
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="adicionar.html"><li>Adicionar/Alterar</li></a>
+            <a href="sobre.html"><li>Sobre</li></a>
+        </ul>
+    </header>
+
+    <div class="burguer" id="burguer" onclick="burguer(this)"> <!-- Menu hamburguer -->
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <form id="form_data"> <!-- Formulário -->
+        <label for="id" class="form_label">Id</label> <br>
+        <input type="number" id="id">
+
+        <br><br>
+
+        <label for="img" class="img">Endereço da imagem</label> <br>
+        <input type="url" id="img">
+
+        <br><br>
+
+        <label for="nome" class="form_label">Nome do jogo</label> <br>
+        <input type="text" id="nome">
+
+        <br><br>
+
+        <label for="date" class="form_label">Data de lançamento</label> <br>
+        <input type="date" id="date">
+
+        <br><br>
+
+        <label>Tem crack?</label> <br>
+        <label for="no">não</label>
+        <input type="radio" name="crack" id="no" value="0" />
+        <br>
+        <label for="yes">Sim</label>
+        <input type="radio" name="crack" id="yes" value="1" /> 
+    </form>
+
+    <div class="buttons"> <!-- Botões -->
+        <button type="submit" class="save" onclick="salvar();">Salvar</button>
+        <button type="submit" class="alter" onclick="alterar();">Alterar</button>
+        <button type="submit" class="exc" onclick="excluir();">Excluir</button>
+    </div>
+
+    <!-- Inclusão dos scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="toastr/toastr.min.js"></script>
+
+    <script src="burguer.js"></script>
+
+</body>
+</html>
